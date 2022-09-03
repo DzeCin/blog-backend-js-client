@@ -25,16 +25,18 @@ export class Post {
    * Constructs a new <code>Post</code>.
    * @alias module:model/Post
    * @class
-   * @param id {String} 
-   * @param tags {Array.<String>} 
-   * @param header {String} 
-   * @param content {String} 
-   * @param author {String} 
-   * @param dateCreated {Date} 
-   * @param dateUpdated {Date} 
+   * @param id {String}
+   * @param title {String}
+   * @param tags {Array.<String>}
+   * @param header {String}
+   * @param content {String}
+   * @param author {String}
+   * @param dateCreated {Date}
+   * @param dateUpdated {Date}
    */
-  constructor(id, tags, header, content, author, dateCreated, dateUpdated) {
+  constructor(id, title, tags, header, content, author, dateCreated, dateUpdated) {
     this.id = id;
+    this.title = title;
     this.tags = tags;
     this.header = header;
     this.content = content;
@@ -55,6 +57,8 @@ export class Post {
       obj = obj || new Post();
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
+      if (data.hasOwnProperty('title'))
+        obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('tags'))
         obj.tags = ApiClient.convertToType(data['tags'], ['String']);
       if (data.hasOwnProperty('header'))
@@ -76,6 +80,11 @@ export class Post {
  * @member {String} id
  */
 Post.prototype.id = undefined;
+
+/**
+ * @member {String} title
+ */
+Post.prototype.title = undefined;
 
 /**
  * @member {Array.<String>} tags
@@ -106,4 +115,3 @@ Post.prototype.dateCreated = undefined;
  * @member {Date} dateUpdated
  */
 Post.prototype.dateUpdated = undefined;
-
