@@ -27,13 +27,13 @@ import superagent from "superagent";
 * @class
 */
 export class ApiClient {
-    constructor(basePath) {
+    constructor() {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
          * @default {server}/v1
          */
-        this.basePath = basePath.replace(/\/+$/, '');
+        this.basePath = "/".replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
