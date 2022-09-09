@@ -1,6 +1,6 @@
 # JsApiBlogClient.HealthCheckApi
 
-All URIs are relative to *{server}/v1*
+All URIs are relative to *{server}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Health check
 
-This requests is for health check purpose. 
+This requests is for health check purpose.
 
 ### Example
 ```javascript
@@ -41,6 +41,5 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+- **Content-Type**: Not defined
+- **Accept**: Not defined

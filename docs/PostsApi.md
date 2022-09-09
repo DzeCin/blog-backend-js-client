@@ -1,6 +1,6 @@
 # JsApiBlogClient.PostsApi
 
-All URIs are relative to *{server}/v1*
+All URIs are relative to *{server}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,6 +23,9 @@ Adds a post
 import {JsApiBlogClient} from 'js-api-blog-client';
 let defaultClient = JsApiBlogClient.ApiClient.instance;
 
+// Configure OAuth2 access token for authorization: oAuth
+let oAuth = defaultClient.authentications['oAuth'];
+oAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new JsApiBlogClient.PostsApi();
 let opts = { 
@@ -41,7 +44,7 @@ apiInstance.addPost(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Post**](Post.md)| Post to add in json format | [optional] 
+**body** | [**Post**](Post.md)| Post to add in json format | [optional]
 
 ### Return type
 
@@ -49,12 +52,12 @@ null (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[oAuth](../README.md#oAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 <a name="deletePost"></a>
 # **deletePost**
@@ -65,6 +68,11 @@ Delete a post by ID
 ### Example
 ```javascript
 import {JsApiBlogClient} from 'js-api-blog-client';
+let defaultClient = JsApiBlogClient.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: oAuth
+let oAuth = defaultClient.authentications['oAuth'];
+oAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new JsApiBlogClient.PostsApi();
 let postId = "postId_example"; // String | ID of the post to delete
@@ -82,7 +90,7 @@ apiInstance.deletePost(postId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **String**| ID of the post to delete | 
+**postId** | **String**| ID of the post to delete |
 
 ### Return type
 
@@ -90,12 +98,12 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oAuth](../README.md#oAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 <a name="getPost"></a>
 # **getPost**
@@ -123,7 +131,7 @@ apiInstance.getPost(postId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **String**| ID of the post to get | 
+**postId** | **String**| ID of the post to get |
 
 ### Return type
 
@@ -135,8 +143,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="getPosts"></a>
 # **getPosts**
@@ -144,7 +152,7 @@ No authorization required
 
 Get all posts
 
-This requests get all the posts from the db. 
+This requests get all the posts from the db.
 
 ### Example
 ```javascript
@@ -173,8 +181,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="updatePost"></a>
 # **updatePost**
@@ -185,6 +193,11 @@ Update a post by ID
 ### Example
 ```javascript
 import {JsApiBlogClient} from 'js-api-blog-client';
+let defaultClient = JsApiBlogClient.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: oAuth
+let oAuth = defaultClient.authentications['oAuth'];
+oAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new JsApiBlogClient.PostsApi();
 let postId = "postId_example"; // String | ID of the post to update
@@ -204,8 +217,8 @@ apiInstance.updatePost(postId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **String**| ID of the post to update | 
- **body** | [**Post**](Post.md)| Post to modify in | [optional] 
+**postId** | **String**| ID of the post to update |
+**body** | [**Post**](Post.md)| Post to modify in | [optional]
 
 ### Return type
 
@@ -213,10 +226,9 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oAuth](../README.md#oAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
+- **Content-Type**: application/json
+- **Accept**: Not defined
