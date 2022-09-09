@@ -17,20 +17,20 @@ import {ApiClient} from "../ApiClient";
 import {Post} from '../model/Post';
 
 /**
-* Posts service.
-* @module clientAPIBlog/PostsApi
-* @version 1.0.0
-*/
+ * Posts service.
+ * @module clientAPIBlog/PostsApi
+ * @version 1.0.0
+ */
 export class PostsApi {
 
     /**
-    * Constructs a new PostsApi. 
-    * @alias module:clientAPIBlog/PostsApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instanc
+     * Constructs a new PostsApi.
+     * @alias module:clientAPIBlog/PostsApi
+     * @class
+     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+     * default to {@link module:ApiClient#instanc
     e} if unspecified.
-    */
+     */
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
@@ -51,32 +51,32 @@ export class PostsApi {
      * @param {module:clientAPIBlog/PostsApi~addPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
     addPost(opts, callback) {
-      opts = opts || {};
-      let postBody = opts['body'];
+        opts = opts || {};
+        let postBody = opts['body'];
 
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let pathParams = {
 
-      let authNames = ['BearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+        };
+        let queryParams = {
 
-      return this.apiClient.callApi(
-        '/posts', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let headerParams = {
+
+        };
+        let formParams = {
+
+        };
+
+        let authNames = ['oAuth'];
+        let contentTypes = ['application/json'];
+        let accepts = [];
+        let returnType = null;
+
+        return this.apiClient.callApi(
+            '/posts', 'POST',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
     /**
      * Callback function to receive the result of the deletePost operation.
@@ -92,36 +92,36 @@ export class PostsApi {
      * @param {module:clientAPIBlog/PostsApi~deletePostCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deletePost(postId, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'postId' is set
-      if (postId === undefined || postId === null) {
-        throw new Error("Missing the required parameter 'postId' when calling deletePost");
-      }
 
-      let pathParams = {
-        'postId': postId
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let postBody = null;
+        // verify the required parameter 'postId' is set
+        if (postId === undefined || postId === null) {
+            throw new Error("Missing the required parameter 'postId' when calling deletePost");
+        }
 
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+        let pathParams = {
+            'postId': postId
+        };
+        let queryParams = {
 
-      return this.apiClient.callApi(
-        '/posts/{postId}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let headerParams = {
+
+        };
+        let formParams = {
+
+        };
+
+        let authNames = ['oAuth'];
+        let contentTypes = [];
+        let accepts = [];
+        let returnType = null;
+
+        return this.apiClient.callApi(
+            '/posts/{postId}', 'DELETE',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
     /**
      * Callback function to receive the result of the getPost operation.
@@ -138,36 +138,36 @@ export class PostsApi {
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
     getPost(postId, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'postId' is set
-      if (postId === undefined || postId === null) {
-        throw new Error("Missing the required parameter 'postId' when calling getPost");
-      }
 
-      let pathParams = {
-        'postId': postId
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let postBody = null;
+        // verify the required parameter 'postId' is set
+        if (postId === undefined || postId === null) {
+            throw new Error("Missing the required parameter 'postId' when calling getPost");
+        }
 
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Post;
+        let pathParams = {
+            'postId': postId
+        };
+        let queryParams = {
 
-      return this.apiClient.callApi(
-        '/posts/{postId}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let headerParams = {
+
+        };
+        let formParams = {
+
+        };
+
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ['application/json'];
+        let returnType = Post;
+
+        return this.apiClient.callApi(
+            '/posts/{postId}', 'GET',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
     /**
      * Callback function to receive the result of the getPosts operation.
@@ -179,37 +179,37 @@ export class PostsApi {
 
     /**
      * Get all posts
-     * This requests get all the posts from the db. 
+     * This requests get all the posts from the db.
      * @param {module:clientAPIBlog/PostsApi~getPostsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
     getPosts(callback) {
-      
-      let postBody = null;
 
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let postBody = null;
 
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = [Post];
+        let pathParams = {
 
-      return this.apiClient.callApi(
-        '/posts', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let queryParams = {
+
+        };
+        let headerParams = {
+
+        };
+        let formParams = {
+
+        };
+
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ['application/json'];
+        let returnType = [Post];
+
+        return this.apiClient.callApi(
+            '/posts', 'GET',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
     /**
      * Callback function to receive the result of the updatePost operation.
@@ -227,36 +227,36 @@ export class PostsApi {
      * @param {module:clientAPIBlog/PostsApi~updatePostCallback} callback The callback function, accepting three arguments: error, data, response
      */
     updatePost(postId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['body'];
-      // verify the required parameter 'postId' is set
-      if (postId === undefined || postId === null) {
-        throw new Error("Missing the required parameter 'postId' when calling updatePost");
-      }
+        opts = opts || {};
+        let postBody = opts['body'];
+        // verify the required parameter 'postId' is set
+        if (postId === undefined || postId === null) {
+            throw new Error("Missing the required parameter 'postId' when calling updatePost");
+        }
 
-      let pathParams = {
-        'postId': postId
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let pathParams = {
+            'postId': postId
+        };
+        let queryParams = {
 
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+        };
+        let headerParams = {
 
-      return this.apiClient.callApi(
-        '/posts/{postId}', 'PATCH',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let formParams = {
+
+        };
+
+        let authNames = ['oAuth'];
+        let contentTypes = ['application/json'];
+        let accepts = [];
+        let returnType = null;
+
+        return this.apiClient.callApi(
+            '/posts/{postId}', 'PATCH',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
 
 }

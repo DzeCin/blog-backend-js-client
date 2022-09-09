@@ -16,20 +16,20 @@
 import {ApiClient} from "../ApiClient";
 
 /**
-* HealthCheck service.
-* @module clientAPIBlog/HealthCheckApi
-* @version 1.0.0
-*/
+ * HealthCheck service.
+ * @module clientAPIBlog/HealthCheckApi
+ * @version 1.0.0
+ */
 export class HealthCheckApi {
 
     /**
-    * Constructs a new HealthCheckApi. 
-    * @alias module:clientAPIBlog/HealthCheckApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instanc
+     * Constructs a new HealthCheckApi.
+     * @alias module:clientAPIBlog/HealthCheckApi
+     * @class
+     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+     * default to {@link module:ApiClient#instanc
     e} if unspecified.
-    */
+     */
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
@@ -44,36 +44,36 @@ export class HealthCheckApi {
 
     /**
      * Health check
-     * This requests is for health check purpose. 
+     * This requests is for health check purpose.
      * @param {module:clientAPIBlog/HealthCheckApi~healthCheckCallback} callback The callback function, accepting three arguments: error, data, response
      */
     healthCheck(callback) {
-      
-      let postBody = null;
 
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
+        let postBody = null;
 
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+        let pathParams = {
 
-      return this.apiClient.callApi(
-        '/', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
+        };
+        let queryParams = {
+
+        };
+        let headerParams = {
+
+        };
+        let formParams = {
+
+        };
+
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = [];
+        let returnType = null;
+
+        return this.apiClient.callApi(
+            '/', 'GET',
+            pathParams, queryParams, headerParams, formParams, postBody,
+            authNames, contentTypes, accepts, returnType, callback
+        );
     }
 
 }
